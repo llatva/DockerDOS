@@ -51,3 +51,13 @@ IMAGE_NAME=my-dosbox:latest ./run-dosbox.sh
 
 - This image installs DOSBox from the Alpine package repo to stay small and easy to update.
 - If DOSBox cannot connect to your display, ensure `xhost +local:` (or equivalent) is set.
+- Exposing the X11 socket gives containers access to your display; only use it with trusted images.
+
+## Versioning
+
+Override Alpine if you need to pin or update the base image:
+
+```sh
+ALPINE_VERSION=3.20 make build
+ALPINE_VERSION=3.20 make update
+```

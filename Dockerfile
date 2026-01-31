@@ -1,6 +1,9 @@
 ARG ALPINE_VERSION=3.20
 FROM alpine:${ALPINE_VERSION}
 
-RUN apk add --no-cache dosbox-staging
+RUN apk add --no-cache \
+    dosbox-staging \
+    mesa-dri-gallium \
+    mesa-gl
 
 ENTRYPOINT ["dosbox"]

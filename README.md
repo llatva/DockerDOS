@@ -16,6 +16,14 @@ make build
 
 ## Run interactively
 
+First, allow Docker to access your X server:
+
+```sh
+xhost +local:docker
+```
+
+Then run DOSBox:
+
 ```sh
 ./run-dosbox.sh
 ```
